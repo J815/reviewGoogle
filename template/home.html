@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Add Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div class="pac-card" id="pac-card">
+      <div>
+          <div id="label">Location search</div>
+      </div>
+    
+      <div id="pac-container">
+        <form action="{{ url_for('info') }}" method="post">
+          <input id="pac-input" type="text" name="location" placeholder="Enter a location">
+          <input type="submit" value="submit">
+        </form>
+          <div id="location-error"></div>
+      </div>
+  </div>
+  <div id="map"></div>
+  <div id="infowindow-content">{{ result }}
+      <img src="" width="16" height="16" id="place-icon"> <span
+          id="place-name" class="title"></span><br> <span
+          id="place-address"></span>
+  </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+  </body>
+</html>
